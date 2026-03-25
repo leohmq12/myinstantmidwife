@@ -638,6 +638,9 @@ body {
 .testimonials {
     text-align: center;
     padding: 80px 120px;
+    background: url('../images/bg.png') no-repeat center center;
+    background-size: cover;
+    margin-bottom: 70px;
 }
 
 .testimonials h2 {
