@@ -1616,16 +1616,28 @@ body {
         padding-top: 120px;
     }
 
+    .hero {
+        height: 800px;
+    }
+
     .hero-content {
         left: 40px;
+        top: 180px;
+    }
+
+    .hero-title {
+        font-size: 60px;
+        line-height: 72px;
     }
 
     .subscription-btn {
         left: 40px;
+        top: 550px;
     }
 
     .who-left {
         margin-left: 40px;
+        max-width: 450px;
     }
 
     .who-right {
@@ -1645,12 +1657,11 @@ body {
     }
 
     .serve-left {
-        padding-left: 40px;
+        padding: 80px 40px;
     }
 
     .testimonials {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding: 60px 40px;
     }
 
     .gallery-item {
@@ -1723,55 +1734,104 @@ body {
     /* Hero adjustments */
     .hero {
         margin-top: 0;
-        height: 800px;
+        height: 700px;
     }
 
     .hero-content {
-        top: 150px;
-        left: 40px;
+        top: 120px;
+        left: 30px;
     }
 
     .hero-title {
-        font-size: 48px;
-        line-height: 60px;
+        font-size: 42px;
+        line-height: 52px;
+        max-width: 90%;
+    }
+
+    .hero-desc {
+        font-size: 18px;
+        line-height: 30px;
+        max-width: 90%;
     }
 
     .subscription-btn {
-        left: 40px;
-        top: 600px;
+        left: 30px;
+        top: 500px;
     }
 
     /* Stack two-column layouts */
     .who-we-are {
         flex-direction: column;
         text-align: center;
+        padding: 60px 20px;
     }
 
     .who-left {
-        margin: 0 20px;
+        margin: 0 auto 40px;
+        max-width: 80%;
     }
 
     .who-right {
-        margin: 40px 20px;
+        margin: 0 auto;
         text-align: center;
+        max-width: 90%;
+    }
+
+    .who-right h2 {
+        font-size: 40px;
+        line-height: 1.2;
     }
 
     .midwife-section {
         flex-direction: column;
         text-align: center;
+        padding: 60px 20px;
+    }
+
+    .midwife-text {
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+
+    .midwife-text h2 {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    .midwife-img {
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     .birthing-choices {
         flex-direction: column;
         text-align: center;
+        padding: 60px 20px;
     }
 
     .bc-text {
         max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .bc-text h2 {
+        font-size: 36px;
+        line-height: 1.2;
     }
 
     .bc-image {
-        max-width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Packages cards */
+    .card-container {
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .package-card {
+        width: calc(50% - 20px);
     }
 
     /* Serve section stacks */
@@ -1783,14 +1843,15 @@ body {
     .serve-left,
     .serve-right {
         width: 100%;
-        height: 500px;
-        padding: 60px 40px;
+        height: auto;
+        padding: 60px 30px;
     }
 
     /* Footer adjustments */
     .footer-columns {
         justify-content: center;
         text-align: center;
+        gap: 40px;
     }
 
     .contact-row {
@@ -1804,10 +1865,11 @@ body {
     /* Inner pages */
     .inner-hero {
         margin-top: 0;
+        height: 400px;
     }
 
     .inner-hero h1 {
-        font-size: 50px;
+        font-size: 42px;
     }
 
     .testimonial-wrap {
@@ -1815,12 +1877,17 @@ body {
     }
 
     .testimonial-text {
-        font-size: 20px;
-        line-height: 1.8;
+        font-size: 18px;
+        line-height: 1.6;
     }
 
     .about-top {
         flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-image {
+        max-width: 80%;
     }
 
     .values-grid {
@@ -1828,7 +1895,7 @@ body {
     }
 
     .stories-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .faq-grid {
@@ -1847,7 +1914,7 @@ body {
     }
 
     .git-main-img {
-        height: 500px;
+        height: 400px;
     }
 
     .thankyou-content {
@@ -1887,6 +1954,82 @@ body {
         font-size: 20px;
     }
 
+    /* Hero Mobile */
+    .hero {
+        height: 600px;
+    }
+
+    .hero-content {
+        top: 100px;
+        left: 20px;
+        text-align: center;
+        max-width: calc(100% - 40px);
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .hero-desc {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .subscription-btn {
+        position: relative;
+        left: 0;
+        top: 0;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    /* Who We Are Mobile */
+    .who-right h2 {
+        font-size: 32px;
+    }
+
+    .who-right p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Packages Mobile */
+    .package-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Midwife & Choices Mobile */
+    .midwife-text h2, .bc-text h2 {
+        font-size: 32px;
+    }
+
+    .midwife-text p, .bc-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Inner Pages Mobile */
+    .inner-hero {
+        height: 300px;
+    }
+
+    .inner-hero h1 {
+        font-size: 32px;
+    }
+
+    .inner-content {
+        padding: 40px 20px;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer Mobile */
     .questions-cta {
         padding: 40px 20px;
     }
@@ -1948,132 +2091,6 @@ body {
 
     .book-now-btn {
         display: none;
-    }
-
-    /* Hero scales down */
-    .hero-title {
-        font-size: 36px;
-        line-height: 48px;
-    }
-
-    .hero-desc {
-        font-size: 18px;
-        line-height: 28px;
-    }
-
-    /* Packages */
-    .packages h2 {
-        font-size: 32px;
-    }
-
-    .card-container {
-        padding: 0 20px;
-    }
-
-    .package-card {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    /* Testimonials */
-    .testimonial-wrap {
-        gap: 10px;
-    }
-
-    .nav-arrow {
-        font-size: 18px;
-    }
-
-    .testimonial-text {
-        font-size: 18px;
-        line-height: 1.6;
-    }
-
-    /* Gallery */
-    .gallery-item {
-        width: 180px;
-        height: 180px;
-    }
-
-    /* Footer gallery */
-    .footer-gallery {
-        flex-wrap: wrap;
-    }
-
-    .footer-gallery img {
-        width: 50%;
-        height: 150px;
-    }
-
-    /* Inner page hero */
-    .inner-hero {
-        height: auto;
-        padding: 150px 20px 80px;
-    }
-
-    .inner-hero h1 {
-        font-size: 36px;
-        line-height: 1.2;
-    }
-
-    .inner-hero p {
-        font-size: 18px;
-    }
-
-    .inner-content {
-        padding: 60px 20px;
-    }
-
-    /* Section headings scale */
-    .testi-intro h2,
-    .about-text h2,
-    .faq-intro h2,
-    .form-intro h2,
-    .values-intro h2,
-    .git-info h2 {
-        font-size: 32px;
-    }
-
-    .questions-text h3 {
-        font-size: 32px;
-    }
-
-    /* Courses */
-    .bc-text h2 {
-        font-size: 36px;
-        line-height: 48px;
-    }
-
-    /* Thank you section */
-    .thank-you-section {
-        padding: 60px 20px;
-    }
-
-    .thankyou-heading {
-        font-size: 40px;
-    }
-
-    .thankyou-text {
-        font-size: 24px;
-    }
-
-    .thankyou-logo {
-        width: 180px;
-    }
-
-    /* Get in touch */
-    .get-in-touch {
-        padding: 60px 20px;
-    }
-
-    /* Contact footer */
-    .contact-footer {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .contact-left h3 {
-        font-size: 36px;
     }
 }
 
