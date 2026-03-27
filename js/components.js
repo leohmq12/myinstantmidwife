@@ -83,7 +83,7 @@
                 <h3>Have any questions?</h3>
                 <p>Get in touch to find our more about our services and how we can support you</p>
             </div>
-            <a href="${pagesDir}contact.html" class="btn-beige">CONTACT US <i class="fas fa-arrow-right diag-icon"></i></a>
+            <a href="${pagesDir}contact.html" class="btn-beige">CONTACT US <i class="fas fa-times"></i></a>
         </div>
     </section>
 
@@ -97,15 +97,17 @@
                 <a href="${baseDir}index.html" class="logo">
                     <img src="${baseDir}images/Group.png" alt="My Instant Midwife Logo">
                 </a>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
             </div>
 
             <!-- Column 2: Quick Links -->
             <div class="quick-links">
                 <h4>Quick Links</h4>
                 <ul>
+                    <li><a href="${baseDir}index.html">Home</a></li>
                     <li><a href="${pagesDir}about.html">Who We Are</a></li>
-                    <li><a href="${pagesDir}courses.html">Courses</a></li>
+                    <li><a href="#">Areas</a></li>
+                    <li><a href="#">Blogs</a></li>
                     <li><a href="${pagesDir}testimonials.html">Testimonials</a></li>
                     <li><a href="${pagesDir}faq.html">FAQ's</a></li>
                     <li><a href="${pagesDir}contact.html">Contact Us</a></li>
@@ -118,26 +120,24 @@
                 <div class="contact-info">
                     <div class="contact-row">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <span>+44 1234 567890</span>
+                        <span>+44 740 372 1821</span>
                     </div>
                     <div class="contact-row">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <span>info@myinstantmidwife.co.uk</span>
+                        <span>support@mimmyinstantmidwife.com</span>
                     </div>
                     <div class="contact-row">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <span>Lancashire, United Kingdom</span>
+                        <span>1 Hewitt drive Winsford cw7 3nr</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Column 4: Follow Us -->
-            <div class="follow">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#" class="social-circle" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-circle" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-circle" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-circle" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -146,7 +146,7 @@
         <div class="copyright">
             <span>Copyright &copy; 2026. My Instant Midwife. All rights reserved.</span>
             <div class="copyright-links">
-                <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms & Conditions</a>
             </div>
         </div>
     </footer>
