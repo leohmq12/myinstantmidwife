@@ -18,22 +18,36 @@
    Controlled by dot pagination and auto-advances every 7s.
    ========================================================== */
 
-/* Testimonial data array */
 const testimonialsArr = [
     {
-        text: "\u201CLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\u2019s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\u201D",
-        name: "Stacey Wil.",
-        location: "Manchester"
+        text: "\u201CAs first-time parents, we weren't sure what to expect from a biomechanics class, but it genuinely exceeded all expectations. Understanding how positioning and movement could influence labour felt like being given information we didn't even know we were missing. The class gave us real confidence going into birth and we can honestly say it made a difference. We can't recommend it highly enough.\u201D",
+        name: "Beth & Nathan",
+        location: "Biomechanics in Labour Course"
     },
     {
-        text: "\u201CAbsolutely wonderful experience! The midwives were so supportive and knowledgeable. They made me feel safe and confident throughout my pregnancy journey. Highly recommend My Instant Midwife to all expecting mothers.\u201D",
-        name: "Jessica M.",
-        location: "Liverpool"
+        text: "\u201COur labour was incredibly fast, which we didn't anticipate — but looking back, I truly believe that understanding what was happening to my body made all the difference. The course gave me a level of awareness that kept me calm and in control even when things moved quickly. Honestly, it was the knowledge more than anything else that carried me through.\u201D",
+        name: "India & Jack",
+        location: "Biomechanics in Labour Course"
     },
     {
-        text: "\u201CI felt so safe and cared for during my home birth. The team\u2019s expertise and compassion gave me confidence every step of the way. Truly a life-changing experience with amazing professionals.\u201D",
-        name: "Emma R.",
-        location: "Blackpool"
+        text: "\u201CI absolutely love my visits and would recommend Tas to anybody without hesitation. I've had pregnancy massages and more recently the post-dates treatment she offers, and every single session has been wonderful. What makes it so special is that alongside the treatments, Tas takes the time to talk things through — I always leave feeling so much more confident, informed, and of course completely chilled out. I can't recommend her enough.\u201D",
+        name: "Megan",
+        location: "Pregnancy Massage & Post-Dates Treatment"
+    },
+    {
+        text: "\u201CMy postnatal massage with Tas was such a wonderful experience. My breastfeeding baby was a little fussy during the session, but Tas was incredibly understanding — she patiently helped me settle my little one while making sure I still had time to properly relax and enjoy the treatment. Her soothing touch and genuine attention to how I was feeling left me completely at ease, both physically and mentally. I'd highly recommend Tas to any new mum looking for truly supportive postnatal care.\u201D",
+        name: "Melissa",
+        location: "Postnatal Massage"
+    },
+    {
+        text: "\u201CI've been meaning to write this review since finishing our hypnobirthing course with Tas — but in the meantime I've had my gorgeous little boy, and I can honestly say that hypnobirthing truly worked for us. To cut a short labour story even shorter, I dilated fully at home and used every technique Tas had taught us to get through it. I barely remember pain — just the music, the breathing, and focusing through the pressure. All down to Tas. And then, as if it was meant to be, when I arrived at the hospital — Tas was on duty. Her calm presence, her techniques, and her ability to refocus me when I went slightly off track meant more to me than I will ever be able to put into words. I couldn't recommend her highly enough.\u201D",
+        name: "Lynsay",
+        location: "Hypnobirthing Course"
+    },
+    {
+        text: "\u201CMiM was the perfect partner throughout our pregnancy journey. Due to a pre-existing medical condition, a caesarean section was the safest option for us — and while we knew it was the right decision, it naturally brought its own anxieties for both myself and my husband. Tas tailored our hypnobirthing sessions entirely to our individual needs, addressing our fears around the antenatal period, the birth itself, and recovery. Over five sessions she guided us through techniques that genuinely transformed how we felt going into theatre — she even suggested we choose our own music, which made the experience feel personal and calm rather than clinical. Our hypnobirthing journey prepared us for the most wonderful birth experience, and I would wholeheartedly recommend it to any couple, whether you are planning a natural birth or a caesarean.\u201D",
+        name: "Hayley & Husband",
+        location: "Hypnobirthing Sessions"
     }
 ];
 
@@ -306,6 +320,19 @@ sections.forEach(section => {
             const originalItems = Array.from(gallery.children);
             if (originalItems.length === 0) return;
 
+            // Add Instagram overlay to every gallery item
+            originalItems.forEach(item => {
+                // Only add if overlay doesn't already exist
+                if (!item.querySelector('.ig-overlay')) {
+                    const overlay = document.createElement('div');
+                    overlay.className = 'ig-overlay';
+                    const icon = document.createElement('i');
+                    icon.className = 'fab fa-instagram';
+                    overlay.appendChild(icon);
+                    item.appendChild(overlay);
+                }
+            });
+
             // Create the track element that will animate
             const track = document.createElement('div');
             track.className = 'gallery-track';
@@ -332,7 +359,58 @@ sections.forEach(section => {
     }
 })();
 
+  
+  
+// ========== PDF DOWNLOAD FROM PDFS FOLDER ==========
+// Note: courses.html pages folder mein hai, isliye path mein "../" lagega
 
+function downloadActualPDF(pdfFileName, displayName) {
+    // pages folder se root folder mein jane ke liye "../" use karna hoga
+    // phir pdfs folder mein jaana hai
+    const pdfPath = `../pdf/${pdfFileName}`;
+    
+    console.log('Downloading from:', pdfPath); // Debug ke liye
+    
+    // Create anchor element for download
+    const link = document.createElement('a');
+    link.href = pdfPath;
+    link.download = displayName;
+    
+    // Trigger download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+// Attach click handlers to download buttons
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Page loaded - setting up download buttons');
+    
+    // Select all download buttons
+    const downloadButtons = document.querySelectorAll('.btn-download-dark, .btn-download-light');
+    
+    console.log('Found buttons:', downloadButtons.length);
+    
+    downloadButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const pdfType = this.getAttribute('data-pdf');
+            console.log('Download clicked for:', pdfType);
+            
+            // Map each button to its PDF file - EXACT NAMES USE KAR RAHE HAIN
+            if (pdfType === 'biomechanics') {
+                downloadActualPDF('MIM-Biomechanics-in-Labour.pdf', 'MIM_Biomechanics_in_Labour.pdf');
+            } 
+            else if (pdfType === 'babymoon') {
+                downloadActualPDF('MIM-Baby-Moon-40-Days.pdf', 'MIM_Baby_Moon_40_Days.pdf');
+            } 
+            else if (pdfType === 'hypnobirthing') {
+                downloadActualPDF('MIM-Hypnobirthing-Course.pdf', 'MIM_Hypnobirthing_Course.pdf');
+            }
+        });
+    });
+});
 /* ==========================================================
    7. FAQ ACCORDION
    Click a question to expand/collapse its answer.

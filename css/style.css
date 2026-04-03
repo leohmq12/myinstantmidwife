@@ -348,24 +348,25 @@ body {
 
 
 /* ==========================================================
+ /* ==========================================================
    5. WHO WE ARE SECTION
    Dark background, image left + text right.
    ========================================================== */
-
 .who-we-are {
     position: relative;
     background: #1E1E1E;
     padding: 100px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 80px;
 }
 
 .who-left {
-    margin-left: 120px;
+    margin-left: 0;
     max-width: 500px;
-    flex: 1;
+    flex: 0 0 auto;
 }
 
 .who-left img {
@@ -375,10 +376,10 @@ body {
 }
 
 .who-right {
-    margin-right: 240px;
+    margin-right: 0;
     max-width: 600px;
     color: white;
-    flex: 1;
+    flex: 0 1 600px;
 }
 
 .who-right h2 {
@@ -387,59 +388,665 @@ body {
     font-weight: 500;
     letter-spacing: -0.02em;
     color: #FFFFFF;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+.who-right h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #D4B88C;
+    margin-bottom: 20px;
+}
+
+.who-right .midwife-names {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
 }
 
 .who-right p {
-    font-size: 21px;
+    font-size: 20px;
     line-height: 42px;
     opacity: 0.8;
     margin-bottom: 40px;
 }
 
-
 /* ==========================================================
-   6. PACKAGES / WHAT WE OFFER
-   Centered section with three pricing cards.
+   RESPONSIVE BREAKPOINTS
    ========================================================== */
 
-/* ============================================
-   PACKAGES SECTION STYLING
-   ============================================ */
-
-/* ============================================
-   PACKAGES SECTION STYLING
-   ============================================ */
-/* ============================================
-   PACKAGES SECTION STYLING WITH EXPAND FUNCTIONALITY
-   ============================================ */
-
-.packages {
-    background: url('../images/bg.png') no-repeat center center;
-    background-size: cover;
-    padding: 80px 0 100px;
-    text-align: center;
-    position: relative;
-    background-color: #fef9f2;
+/* Large Desktop 1920px */
+@media (min-width: 1920px) {
+    .who-we-are {
+        gap: 120px;
+        padding: 120px 0;
+    }
+    
+    .who-left {
+        max-width: 550px;
+    }
+    
+    .who-right {
+        max-width: 650px;
+    }
+    
+    .who-right h2 {
+        font-size: 70px;
+    }
+    
+    .who-right h3 {
+        font-size: 32px;
+    }
+    
+    .who-right .midwife-names {
+        font-size: 24px;
+    }
+    
+    .who-right p {
+        font-size: 22px;
+        line-height: 44px;
+    }
 }
 
-/* "WHAT WE OFFER" label above heading */
+/* Desktop 1440px */
+@media (max-width: 1440px) {
+    .who-we-are {
+        gap: 60px;
+    }
+    
+    .who-left {
+        max-width: 450px;
+    }
+    
+    .who-right {
+        max-width: 550px;
+    }
+    
+    .who-right h2 {
+        font-size: 55px;
+    }
+    
+    .who-right p {
+        font-size: 19px;
+        line-height: 38px;
+    }
+}
+
+/* Laptop 1366px */
+@media (max-width: 1366px) {
+    .who-we-are {
+        gap: 50px;
+        padding: 80px 0;
+    }
+    
+    .who-left {
+        max-width: 420px;
+    }
+    
+    .who-right {
+        max-width: 520px;
+    }
+    
+    .who-right h2 {
+        font-size: 52px;
+    }
+    
+    .who-right h3 {
+        font-size: 26px;
+    }
+    
+    .who-right .midwife-names {
+        font-size: 21px;
+    }
+    
+    .who-right p {
+        font-size: 18px;
+        line-height: 36px;
+    }
+}
+
+/* Laptop Small 1200px */
+@media (max-width: 1200px) {
+    .who-we-are {
+        gap: 40px;
+        padding: 70px 40px;
+    }
+    
+    .who-left {
+        max-width: 380px;
+    }
+    
+    .who-right {
+        max-width: 480px;
+    }
+    
+    .who-right h2 {
+        font-size: 48px;
+    }
+    
+    .who-right h3 {
+        font-size: 24px;
+    }
+    
+    .who-right .midwife-names {
+        font-size: 20px;
+    }
+    
+    .who-right p {
+        font-size: 17px;
+        line-height: 34px;
+        margin-bottom: 35px;
+    }
+}
+
+/* Tablet Landscape 1024px */
+@media (max-width: 1024px) {
+    .who-we-are {
+        gap: 35px;
+        padding: 60px 30px;
+    }
+    
+    .who-left {
+        max-width: 350px;
+    }
+    
+    .who-right {
+        max-width: 450px;
+    }
+    
+    .who-right h2 {
+        font-size: 44px;
+    }
+    
+    .who-right h3 {
+        font-size: 22px;
+    }
+    
+    .who-right .midwife-names {
+        font-size: 19px;
+    }
+    
+    .who-right p {
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+
+/* Tablet Portrait 992px */
+@media (max-width: 992px) {
+    .who-we-are {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+    
+    .who-left {
+        margin-left: 0;
+        margin-bottom: 0;
+        max-width: 450px;
+        flex: 0 0 auto;
+    }
+    
+    .who-right {
+        margin-right: 0;
+        max-width: 90%;
+        text-align: center;
+    }
+    
+    .who-right h2 {
+        font-size: 48px;
+        text-align: center;
+    }
+    
+    .who-right h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .who-right .midwife-names {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .who-right p {
+        font-size: 18px;
+        line-height: 32px;
+        text-align: center;
+    }
+}
+
+/* Mobile Large 768px */
+@media (max-width: 768px) {
+    .who-we-are {
+        padding: 50px 20px;
+        gap: 35px;
+    }
+    
+    .who-left {
+        max-width: 400px;
+    }
+    
+    .who-right h2 {
+        font-size: 40px;
+    }
+    
+    .who-right h3 {
+        font-size: 24px;
+    }
+    
+    .who-right .midwife-names {
+        font-size: 20px;
+    }
+    
+    .who-right p {
+        font-size: 17px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .btn-beige {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile Medium 576px */
+@media (max-width: 576px) {
+    .who-we-are {
+        padding: 40px 15px;
+        gap: 30px;
+    }
+    
+    .who-left {
+        max-width: 100%;
+    }
+    
+    .who-right h2 {
+        font-size: 36px;
+        margin-bottom: 12px;
+    }
+    
+    .who-right h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .who-right .midwife-names {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .who-right p {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Mobile Small 375px */
+@media (max-width: 375px) {
+    .who-we-are {
+        padding: 35px 12px;
+        gap: 25px;
+    }
+    
+    .who-right h2 {
+        font-size: 32px;
+    }
+    
+    .who-right h3 {
+        font-size: 20px;
+    }
+    
+    .who-right .midwife-names {
+        font-size: 17px;
+    }
+    
+    .who-right p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+
+/* Mobile Extra Small 320px */
+@media (max-width: 320px) {
+    .who-we-are {
+        padding: 30px 10px;
+    }
+    
+    .who-right h2 {
+        font-size: 28px;
+    }
+    
+    .who-right h3 {
+        font-size: 18px;
+    }
+    
+    .who-right .midwife-names {
+        font-size: 16px;
+    }
+    
+    .who-right p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+/* About Us Page - Who We Are Section */
+.who-we-are-about {
+    position: relative;
+    background: #1E1E1E;
+    padding: 100px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.who-left-about {
+    margin-left: 0;
+    max-width: 400px;
+    flex: 0 0 auto;
+    position: sticky;
+    top: 100px;
+}
+
+.who-left-about img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.who-right-about {
+    margin-right: 0;
+    max-width: 700px;
+    color: white;
+    flex: 0 1 700px;
+}
+
+.who-right-about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.who-right-about h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #D4B88C;
+    margin-bottom: 20px;
+}
+
+.who-right-about p {
+    font-size: 18px;
+    line-height: 32px;
+    opacity: 0.85;
+    margin-bottom: 25px;
+}
+
+.who-right-about p strong {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+/* Large Desktop 1920px */
+@media (min-width: 1920px) {
+    .who-we-are-about {
+        justify-content: center;
+        gap: 100px;
+    }
+    
+    .who-left-about {
+        max-width: 450px;
+    }
+    
+    .who-right-about {
+        max-width: 750px;
+    }
+}
+
+/* Desktop 1440px */
+@media (max-width: 1440px) {
+    .who-we-are-about {
+        gap: 60px;
+    }
+    
+    .who-left-about {
+        max-width: 380px;
+    }
+    
+    .who-right-about {
+        max-width: 650px;
+    }
+}
+
+/* Laptop 1366px */
+@media (max-width: 1366px) {
+    .who-we-are-about {
+        gap: 50px;
+    }
+    
+    .who-left-about {
+        max-width: 360px;
+    }
+    
+    .who-right-about {
+        max-width: 600px;
+    }
+    
+    .who-right-about h2 {
+        font-size: 52px;
+    }
+    
+    .who-right-about p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+
+/* Laptop Small 1200px */
+@media (max-width: 1200px) {
+    .who-we-are-about {
+        gap: 40px;
+        padding: 80px 40px;
+    }
+    
+    .who-left-about {
+        max-width: 340px;
+    }
+    
+    .who-right-about {
+        max-width: 550px;
+    }
+    
+    .who-right-about h2 {
+        font-size: 48px;
+    }
+    
+    .who-right-about p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+/* Tablet 992px */
+@media (max-width: 992px) {
+    .who-we-are-about {
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .who-left-about {
+        margin-left: 0;
+        max-width: 400px;
+        position: relative;
+        top: 0;
+        text-align: center;
+    }
+    
+    .who-left-about img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .who-right-about {
+        margin-right: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .who-right-about h2 {
+        font-size: 44px;
+        text-align: center;
+    }
+    
+    .who-right-about h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .who-right-about p strong {
+        text-align: center;
+        display: block;
+    }
+}
+
+/* Mobile 768px */
+@media (max-width: 768px) {
+    .who-we-are-about {
+        padding: 50px 15px;
+    }
+    
+    .who-right-about h2 {
+        font-size: 36px;
+    }
+    
+    .who-right-about h3 {
+        font-size: 24px;
+    }
+    
+    .who-right-about p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+    
+    .who-right-about p strong {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Small 576px */
+@media (max-width: 576px) {
+    .who-we-are-about {
+        padding: 40px 15px;
+        gap: 30px;
+    }
+    
+    .who-left-about {
+        max-width: 100%;
+    }
+    
+    .who-right-about h2 {
+        font-size: 32px;
+    }
+    
+    .who-right-about h3 {
+        font-size: 22px;
+    }
+    
+    .who-right-about p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    .who-right-about p strong {
+        font-size: 18px;
+    }
+}
+
+/* ============================================
+   PACKAGES SECTION - IMPROVED VERTICAL SPACING
+   ============================================ */
+.packages {
+    /* Background image – larger height via extra padding top+bottom */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* KEY FIX: increase section height with generous vertical padding 
+       This gives breathing space above "WHAT WE OFFER" and below "BEGIN YOUR JOURNEY" button */
+    padding: 90px 0 100px;
+    
+    position: relative;
+    isolation: isolate;
+}
+
+/* Subtle overlay for better text readability */
+.packages::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 249, 244, 0.12);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure content sits above overlay */
+.packages > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================
+   SECTION SUBHEADING
+   ============================================ */
 .section-sub {
     font-size: 18px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #B6ACA0;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     font-weight: 500;
+    text-align: center;
 }
 
+/* ============================================
+   MAIN HEADING
+   ============================================ */
 .packages h2 {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
     font-weight: 500;
     letter-spacing: -0.02em;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     color: #2C2823;
+    text-align: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
 .packages h2 .highlight {
@@ -454,22 +1061,29 @@ body {
     left: 0;
     right: 0;
     height: 12px;
-    background: rgba(182, 172, 160, 0.25);
+    background: rgba(182, 172, 160, 0.28);
     z-index: -1;
     border-radius: 4px;
 }
 
+/* ============================================
+   DESCRIPTION TEXT
+   ============================================ */
 .packages-desc {
     font-size: 21px;
-    line-height: 40px;
+    line-height: 1.5;
     opacity: 0.85;
     max-width: 1044px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 56px auto;
     color: #3e3a35;
     font-weight: 400;
+    text-align: center;
+    padding: 0 24px;
 }
 
-/* Cards flex container */
+/* ============================================
+   CARDS CONTAINER
+   ============================================ */
 .card-container {
     display: flex;
     justify-content: center;
@@ -478,7 +1092,9 @@ body {
     padding: 0 115px;
 }
 
-/* Individual package card */
+/* ============================================
+   INDIVIDUAL PACKAGE CARD
+   ============================================ */
 .package-card {
     background: #FFFFFF;
     border-radius: 30px;
@@ -546,13 +1162,9 @@ body {
     background-position: center 30%;
     border-radius: 30px 30px 18px 18px;
     margin-bottom: 18px;
-    transition: height 0.3s ease;
 }
 
-.package-card[data-expanded="true"] .card-img {
-    height: 200px;
-}
-
+/* Card title */
 .card-title {
     font-family: 'Playfair Display', serif;
     font-size: 26px;
@@ -691,10 +1303,12 @@ body {
     transform: translateX(4px);
 }
 
-/* "Begin Your Journey" button below cards */
+/* ============================================
+   BEGIN YOUR JOURNEY BUTTON
+   ============================================ */
 .begin-journey {
     text-align: center;
-    margin-top: 58px;
+    margin-top: 72px;
 }
 
 .btn-dark {
@@ -728,16 +1342,24 @@ body {
     .card-container {
         padding: 0 40px;
     }
+    .packages {
+        padding: 80px 0 90px;
+    }
 }
 
 @media (max-width: 1024px) {
+    .packages {
+        padding: 75px 0 85px;
+    }
     .packages h2 {
         font-size: 42px;
+        margin-bottom: 22px;
     }
     
     .packages-desc {
         font-size: 18px;
-        line-height: 32px;
+        line-height: 1.45;
+        margin-bottom: 48px;
         padding: 0 20px;
     }
     
@@ -763,6 +1385,9 @@ body {
     .package-card:not([data-expanded="true"]) {
         max-height: 500px;
     }
+    .begin-journey {
+        margin-top: 64px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -773,6 +1398,7 @@ body {
     .packages h2 {
         font-size: 34px;
         padding: 0 16px;
+        margin-bottom: 20px;
     }
     
     .packages h2 .highlight::after {
@@ -782,7 +1408,8 @@ body {
     
     .packages-desc {
         font-size: 16px;
-        line-height: 28px;
+        line-height: 1.45;
+        margin-bottom: 42px;
         padding: 0 20px;
     }
     
@@ -836,24 +1463,30 @@ body {
         padding: 12px 28px;
         font-size: 13px;
     }
+    .begin-journey {
+        margin-top: 56px;
+    }
 }
 
 @media (max-width: 480px) {
     .packages {
-        padding: 50px 0 60px;
+        padding: 50px 0 65px;
     }
     
     .section-sub {
         font-size: 14px;
+        margin-bottom: 14px;
     }
     
     .packages h2 {
         font-size: 28px;
+        margin-bottom: 18px;
     }
     
     .packages-desc {
         font-size: 14px;
-        line-height: 24px;
+        line-height: 1.5;
+        margin-bottom: 36px;
     }
     
     .card-container {
@@ -909,7 +1542,7 @@ body {
     }
     
     .begin-journey {
-        margin-top: 40px;
+        margin-top: 48px;
     }
     
     .btn-dark {
@@ -918,103 +1551,378 @@ body {
     }
 }
 
-
+/* Large desktop screens */
+@media (min-width: 1600px) {
+    .packages {
+        padding: 110px 0 130px;
+    }
+    .begin-journey {
+        margin-top: 84px;
+    }
+    .packages-desc {
+        margin-bottom: 68px;
+    }
+}
 /* ==========================================================
-   7. THE MIDWIFE SECTION
-   Text left, image right - emphasises availability.
-   ========================================================== */
+           7. THE MIDWIFE SECTION
+           Text left, image right - emphasises availability.
+           Custom scroll: hidden but functional (scrollbar hidden)
+        ========================================================== */
+        .midwife-section {
+            display: flex;
+            align-items: stretch;      /* both columns full height */
+            justify-content: space-between;
+            padding: 60px 120px;
+            gap: 60px;
+            background: #ffffff;
+            min-height: 90vh;          /* comfortable height, not extreme */
+            max-height: 85vh;          /* prevents too tall section, enables scroll inside text column */
+        }
 
-.midwife-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 210px;
-    gap: 60px;
-    background: #fff;
-    flex-wrap: wrap;
-}
+        /* LEFT COLUMN: scrollable content area with HIDDEN scrollbar (but still functional) */
+        .midwife-text {
+            flex: 1;
+            max-width: 55%;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;           /* vertical scroll when content overflows — functional scroll */
+            padding-right: 12px;
+            max-height: 100%;           /* respects parent height */
+            scrollbar-width: none;      /* Firefox: hide scrollbar */
+            -ms-overflow-style: none;   /* IE/Edge: hide scrollbar */
+        }
+        
+        /* WebKit: hide scrollbar completely but keep scroll ability */
+        .midwife-text::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+            display: none;
+        }
 
-.midwife-text {
-    flex: 1;
-    max-width: 590px;
-}
+        /* If you ever want a minimal visible version on hover (optional), but requirement: hide scrollbar */
+        /* We fully hide it — no track, no thumb visible */
 
-.midwife-text h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 60px;
-    line-height: 80px;
-    font-weight: 500;
-}
+        .midwife-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            line-height: 1.2;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+            color: #1e3a3f;
+            flex-shrink: 0;
+        }
 
-.midwife-text p {
-    font-size: 18px;
-    line-height: 42px;
-    opacity: 0.8;
-    margin: 30px 0 40px;
-}
+        /* rich content wrapper — all the long content */
+        .rich-content {
+            font-size: 17px;
+            line-height: 1.65;
+            color: #2c3e42;
+            margin-bottom: 28px;
+            flex: 1;
+        }
 
-.midwife-img {
-    flex: 1;
-    max-width: 430px;
-}
+        .rich-content p {
+            margin-bottom: 1.35rem;
+            font-size: 17px;
+            line-height: 1.65;
+            opacity: 0.87;
+        }
 
-.midwife-img img {
-    width: 100%;
-    border-radius: 20px;
-}
+        .rich-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 500;
+            margin: 1.6rem 0 0.8rem 0;
+            color: #1e3a3f;
+            letter-spacing: -0.2px;
+        }
 
+        .rich-content h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 1.2rem 0 0.5rem 0;
+            color: #2a5f63;
+        }
 
+        .rich-content ul, 
+        .rich-content ol {
+            margin: 0.5rem 0 1.2rem 1.5rem;
+        }
+
+        .rich-content li {
+            margin-bottom: 0.45rem;
+            line-height: 1.6;
+        }
+
+        .rich-content strong {
+            color: #1e3a3f;
+            font-weight: 600;
+        }
+
+        /* CTA button stays at bottom of scrollable column */
+        .btn-beige {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #e9e0cf;
+            color: #2c3e2b;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 14px 36px;
+            border-radius: 50px;
+            transition: all 0.25s ease;
+            border: 1px solid #d6cbbc;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3px;
+            width: fit-content;
+            margin-top: 12px;
+            margin-bottom: 8px;
+            flex-shrink: 0;
+        }
+
+        .btn-beige i {
+            font-size: 0.85rem;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-beige:hover {
+            background: #dfd3be;
+            border-color: #c4b598;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .btn-beige:hover i {
+            transform: translateX(5px);
+        }
+
+        /* RIGHT COLUMN: image fixed in place, no scroll, nicely centered */
+        .midwife-img {
+            flex: 1;
+            max-width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 20px;          /* subtle sticky effect, stays visible */
+            align-self: center;
+        }
+
+        .midwife-img img {
+            width: 100%;
+            max-width: 440px;
+            border-radius: 32px;
+            object-fit: cover;
+            box-shadow: 0 24px 40px -14px rgba(0,0,0,0.18);
+            transition: transform 0.3s ease;
+            display: block;
+        }
+
+        .midwife-img img:hover {
+            transform: scale(1.01);
+        }
+
+        /* responsive: on tablets, reduce padding and adjust height */
+        @media (max-width: 1200px) {
+            .midwife-section {
+                padding: 50px 70px;
+                gap: 45px;
+                max-height: 85vh;
+            }
+            .midwife-text h2 {
+                font-size: 48px;
+            }
+            .rich-content h3 {
+                font-size: 26px;
+            }
+        }
+
+        /* on medium screens, ensure scroll is comfortable, but keep text column scroll behaviour */
+        @media (max-width: 992px) {
+            .midwife-section {
+                flex-direction: column;
+                padding: 48px 40px;
+                max-height: none;
+                min-height: auto;
+                gap: 32px;
+            }
+            .midwife-text {
+                max-width: 100%;
+                overflow-y: visible;
+                max-height: none;
+                padding-right: 0;
+                scrollbar-width: auto;     /* no hidden requirement needed for stacked, but we keep consistency */
+            }
+            .midwife-text::-webkit-scrollbar {
+                width: 0;
+                background: transparent;
+            }
+            .midwife-img {
+                max-width: 380px;
+                margin: 0 auto;
+                position: relative;
+                top: 0;
+            }
+            .btn-beige {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .midwife-section {
+                padding: 36px 24px;
+            }
+            .midwife-text h2 {
+                font-size: 38px;
+            }
+            .rich-content p, .rich-content {
+                font-size: 16px;
+            }
+            .rich-content h3 {
+                font-size: 24px;
+            }
+            .btn-beige {
+                padding: 12px 28px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* small additional touch for ultra-long content: smooth scroll */
+        .midwife-text {
+            scroll-behavior: smooth;
+        }
+
+        /* subtle fade edge effect (optional, not affecting scrollability) */
+        .midwife-text {
+            scrollbar-width: none;
+        }
+        
+        /* for Firefox to fully hide scrollbar */
+        .midwife-text {
+            scrollbar-width: none;
+        }
 /* ==========================================================
-   8. WHERE DO WE SERVE
-   50/50 split: dark text panel + map image.
-   ========================================================== */
+       8. WHERE DO WE SERVE
+       50/50 split: dark text panel left, map image right.
+       Left panel scrolls WITHOUT scrollbar when content exceeds height
+    ========================================================== */
 
-.serve-section {
-    position: relative;
-    display: flex;
-    height: 880px;
-}
+    .serve-section {
+      position: relative;
+      display: flex;
+      height: 880px;
+      width: 100%;
+    }
 
-.serve-left {
-    width: 50%;
-    background: #111111;
-    color: white;
-    padding: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    .serve-left {
+      width: 50%;
+      background: #111111;
+      color: white;
+      padding: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow-y: auto;
+      /* Hide scrollbar completely */
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
 
-.serve-right {
-    width: 50%;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
+    /* Hide scrollbar for Chrome, Safari, Opera */
+    .serve-left::-webkit-scrollbar {
+      display: none;
+    }
 
-.serve-right img,
-.serve-right iframe {
-    width: 100%;
-    height: 140%;
-    object-fit: cover;
-    border: none;
-}
+    .serve-right {
+      width: 50%;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      position: relative;
+    }
 
-.serve-left h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
+    .serve-right img,
+    .serve-right iframe {
+      width: 100%;
+      height: 140%;
+      object-fit: cover;
+      border: none;
+    }
 
-.serve-left p {
-    font-size: 17px;
-    line-height: 42px;
-    opacity: 0.8;
-    max-width: 690px;
-    margin-bottom: 40px;
-}
+    .serve-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      letter-spacing: -0.3px;
+    }
 
+    .serve-left p {
+      font-size: 17px;
+      line-height: 38px;
+      opacity: 0.8;
+      max-width: 690px;
+      margin-bottom: 40px;
+    }
+      .serve-left p strong{
+      font-size: 20px;
+      line-height: 52px;
+      
+     
+    }
+
+   
+
+   
+
+    /* Responsive */
+    @media (max-width: 1400px) {
+      .serve-left {
+        padding: 80px 60px;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .serve-section {
+        flex-direction: column;
+        height: auto;
+      }
+      .serve-left, .serve-right {
+        width: 100%;
+      }
+      .serve-left {
+        padding: 60px 40px;
+        overflow-y: visible;
+      }
+      .serve-right {
+        height: 500px;
+      }
+      .serve-right img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .serve-left {
+        padding: 40px 24px;
+      }
+      .serve-left h2 {
+        font-size: 32px;
+      }
+      .serve-left p {
+        line-height: 32px;
+        font-size: 15px;
+      }
+      .btn-beige {
+        padding: 12px 28px;
+        font-size: 12px;
+      }
+    }
 
 /* ==========================================================
    9. TESTIMONIALS SLIDER
@@ -1121,7 +2029,7 @@ body {
 }
 
 
-/* ==========================================================
+    /* ==========================================================
    10. GALLERY STRIP
    Auto-scrolling infinite marquee loop.
    ========================================================== */
@@ -1192,11 +2100,9 @@ body {
     transition: 0.3s;
 }
 
-.gallery-item:hover .ig-overlay,
-.gallery-item.show-overlay .ig-overlay {
+.gallery-item:hover .ig-overlay {
     opacity: 1;
 }
-
 
 /* ==========================================================
    11. QUESTIONS CTA & FOOTER
@@ -1571,50 +2477,205 @@ body {
 /* ==========================================================
    14. COURSES PAGE
    ========================================================== */
-
-/* "Putting Birthing Choices Back" section */
 .birthing-choices {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 100px 120px;
-    gap: 30px;
-    background: #000000;
-    color: #FFFFFF;
-    flex-wrap: wrap;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 120px;
+      gap: 30px;
+      background: #000000;
+      color: #FFFFFF;
+      flex-wrap: wrap;
+    }
 
-.bc-text {
-    flex: 1;
-    max-width: 590px;
-}
+    .bc-text {
+      flex: 1;
+      max-width: 590px;
+    }
 
-.bc-text h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 55px;
-    line-height: 72px;
-    font-weight: 500;
-    margin-bottom: 30px;
-    color: #FFFFFF;
-}
+    .bc-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 55px;
+      line-height: 72px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      color: #FFFFFF;
+    }
 
-.bc-text p {
-    font-size: 18px;
-    line-height: 42px;
-    opacity: 0.8;
-    margin-bottom: 40px;
-}
+    .bc-text p {
+      font-size: 18px;
+      line-height: 42px;
+      opacity: 0.8;
+      margin-bottom: 40px;
+    }
 
-.bc-image {
-    flex: 1;
-    max-width: 430px;
-}
+    .bc-image {
+      flex: 1;
+      max-width: 430px;
+    }
 
-.bc-image img {
-    width: 100%;
-    border-radius: 20px;
-}
+    .bc-image img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      object-fit: cover;
+      height: 600px;
+    }
 
+    /* custom button style matching the elegant look */
+    .btn-download-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #c6a27a;
+      color: #000000;
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-download-dark i {
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+
+    .btn-download-dark:hover {
+      background: #dbb587;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    .btn-download-dark:hover i {
+      transform: translateX(4px);
+    }
+
+  /* ========== SECTION 2 (WHITE) - right side text, left side image ========== */
+   
+    .birthing-choices-white {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 120px;
+      gap: 30px;
+      background: #ffffff;
+      color: #1a1a1a;
+      flex-wrap: wrap;
+      flex-direction: row; /* default: image left, text right */
+    }
+
+    .bc-text-white {
+      flex: 1;
+      max-width: 590px;
+    }
+
+    .bc-text-white h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 55px;
+      line-height: 72px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      color: #1a1a1a;
+    }
+
+    .bc-text-white p {
+      font-size: 18px;
+      line-height: 42px;
+      opacity: 0.85;
+      margin-bottom: 40px;
+      color: #2c2c2c;
+    }
+
+    .bc-image-white {
+      flex: 1;
+      max-width: 430px;
+    }
+
+    .bc-image-white img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      height: 600px;
+    }
+
+    .btn-download-light {
+      background: #e4d5c0;
+      color: #1e1e1e;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+
+    .btn-download-light i {
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+
+    .btn-download-light:hover {
+      background: #d6c4aa;
+      transform: translateY(-2px);
+    }
+
+    .btn-download-light:hover i {
+      transform: translateX(4px);
+    }
+
+    /* ========== SECTION 3 (BLACK again) - left text, right image ========== */
+    
+
+    /* responsive adjustments exactly matching the original padding behaviour */
+    @media (max-width: 1100px) {
+      .birthing-choices, .birthing-choices-white {
+        padding: 70px 60px;
+      }
+      .bc-text h2, .bc-text-white h2 {
+        font-size: 44px;
+        line-height: 58px;
+      }
+      .bc-text p, .bc-text-white p {
+        font-size: 17px;
+        line-height: 34px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .birthing-choices, .birthing-choices-white {
+        padding: 50px 32px;
+        flex-direction: column;
+        text-align: center;
+      }
+      .birthing-choices-white {
+        flex-direction: column;
+      }
+      .bc-text, .bc-text-white, .bc-image, .bc-image-white {
+        max-width: 100%;
+      }
+      .bc-image, .bc-image-white {
+        margin-bottom: 20px;
+      }
+      .btn-download-dark, .btn-download-light {
+        margin: 0 auto;
+      }
+      .bc-text p, .bc-text-white p {
+        margin-bottom: 30px;
+      }
+    }
 
 /* ==========================================================
    15. TESTIMONIALS PAGE
@@ -2034,9 +3095,7 @@ body {
         padding: 0 40px;
     }
 
-    .midwife-section {
-        padding: 60px 40px;
-    }
+    
 
     .birthing-choices {
         padding: 80px 40px;
@@ -2168,27 +3227,7 @@ body {
         line-height: 1.2;
     }
 
-    .midwife-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 60px 20px;
-    }
-
-    .midwife-text {
-        margin-bottom: 40px;
-        max-width: 100%;
-    }
-
-    .midwife-text h2 {
-        font-size: 40px;
-        line-height: 1.2;
-    }
-
-    .midwife-img {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
+   
     .birthing-choices {
         flex-direction: column;
         text-align: center;
