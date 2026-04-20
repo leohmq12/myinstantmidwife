@@ -119,22 +119,10 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Get in Touch -->
-            <div class="getintouch">
-                <h4>Get in Touch</h4>
-                <div class="contact-info">
-                    <div class="contact-row">
-                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <span>+44 740 372 1821</span>
-                    </div>
-                    <div class="contact-row">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <span>support@mimmyinstantmidwife.com</span>
-                    </div>
-                    <div class="contact-row">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <span>1 Hewitt drive Winsford cw7 3nr</span>
-                    </div>
+          
+                <div class="contact-info">  
+                 
+                 
                 </div>
                 <div class="follow">
                     <h4>Follow Us</h4>
